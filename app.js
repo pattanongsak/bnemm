@@ -28,7 +28,7 @@ const usersRouters = require('./routers/users');
 const ordersRouters = require('./routers/orders');
 
 
-const api = '/api/v1';
+const api = process.env.API_URL;
 
 app.use(`${api}/categories`, categoriesRouters);
 app.use(`${api}/products`, productsRouters);
