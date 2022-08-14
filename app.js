@@ -12,6 +12,8 @@ require('dotenv/config');
 app.use(cors());
 app.options('*', cors());
 
+const PORT = process.env.PORT || 5000;
+
 //middleware
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
@@ -49,6 +51,6 @@ mongoose.connect(process.env.CONNECTION_STRING, {
     console.log(err);
 })
 
-app.listen(3000, () => {
-    console.log('server is running http://localhost:3000');
+app.listen(PORT, () => {
+    console.log('server is running http://localhost:5000');
 })

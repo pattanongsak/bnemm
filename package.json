@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "backend of ecommerce",
   "main": "app.js",
-  "engines": {
-    "node": "12.11.1"
-  },
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
