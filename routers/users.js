@@ -53,7 +53,7 @@ router.put('/:id', async (req, res) => {
         newPassword = userExist.passwordHash;
     }
 
-    const use = await User.findByIdAndUpdate (
+    const user = await User.findByIdAndUpdate (
         req.params.id,
         {
             name: req.body.name,
@@ -72,7 +72,7 @@ router.put('/:id', async (req, res) => {
     
 
     if(!user)
-    return res.status(500).send('the user cannot be created!');
+    return res.status(500).send('the user cannot be updated!');
     
     res.send(user);
 })
@@ -119,7 +119,7 @@ router.post('/register', async (req, res) => {
     user = await user.save();
 
     if(!user)
-    return res.status(400).send('the user cannot be created!');
+    return res.status(500).send('the user cannot be created!');
     
     res.send(user);
 })
