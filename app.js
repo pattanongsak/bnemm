@@ -12,7 +12,7 @@ require('dotenv/config');
 app.use(cors());
 app.options('*', cors());
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 9001;
 
 //middleware
 app.use(bodyParser.json());
