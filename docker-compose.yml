@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  node-api:
+    image: ecommerce-service-api-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecommerce-service-api-dev
+    ports:
+      - 9000:9000
+    restart: 'always'
